@@ -1,0 +1,122 @@
+  <div class="row">
+	  <div class="col-md-4 sidepanel">
+		<form class="form-horizontal">
+			<h4 class="text-uppercase">Income:</h4>
+			<div class="form-group">
+		    <label for="inputEmail3" class="col-sm-5 control-label">Gross Pay:</label>
+				<div class="col-sm-5">
+					<input type="number" ng-model="expense.grossPay" placeholder="Amount" class="form-control">
+				</div>
+			</div>
+			  <h4 class="text-uppercase">Essentials:</h4>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Housing/Rent</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.housing" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Food</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.food" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Car/Transportation</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.transportation" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Car Insurance</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.insurance" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Power Utility Bill</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.power" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Gas Utility Bill</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.gas" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Water Utility Bill</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.water" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Other</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.other" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+			<h4 class="text-uppercase">Financial Obligations:</h4>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Savings Contributions</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.savings" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Retirement Contributions</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.retirement" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Debt Reduction</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.debt" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Other</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.other2" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+			<h4 class="text-uppercase">Personal Choices:</h4>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">CellPhone Bill</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.cellphone" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Cable/Internet Bill</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.cable" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Dinning Out</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.dinningOut" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  		    <label for="inputEmail3" class="col-sm-5 control-label">Other</label>
+  				<div class="col-sm-5">
+  					<input type="number" ng-model="expense.other3" placeholder="Amount" class="form-control">
+  				</div>
+  			</div>
+  			<div class="form-group">
+  				<div class="col-sm-8 col-md-offset-3">
+	  			  <button type="button" ng-click="reset()" value="Reset" class="btn btn-default">Reset</button>
+	  			  <button type="submit" ng-click="update(expense); updateChart()" value="Save" class="btn btn-info">Submit</button>
+  				</div>
+  			</div>
+		</form>
+	</div>
+	<div class="col-md-8">
+		<highchart id="chart1" config="highchartsNG"></highchart> {{personalChoices}}
+	</div>
+  </div>
+  
