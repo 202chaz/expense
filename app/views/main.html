@@ -116,7 +116,67 @@
 		</form>
 	</div>
 	<div class="col-md-8">
-		<highchart id="chart1" config="highchartsNG"></highchart> {{personalChoices}}
+		<highchart id="chart1" config="highchartsNG"></highchart>
+		<h4 class="text-center">Your Summary</h4>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center">Essentail Payments</h3>
+			  </div>
+			  <div class="panel-body">
+				  <p class="text-center">Percentage of pay</p>
+				  <div class="col-md-6">
+					  %<ng-count-up from="0" to="50" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					  <p class="text-center">Standard</p>
+				  </div>
+				  <div class="col-md-6">
+			  		%<ng-count-up from="0" to="{{essentialPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage" ng-if="{{essentialPercentage}}<'50'"></ng-count-up>
+					<ng-count-up from="0" to="{{essentialPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="overPercentage" ng-if="{{essentialPercentage}}>'50'"></ng-count-up>
+					<p class="text-center">You</p>
+				  </div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center">Financial Obligations</h3>
+			  </div>
+			  <div class="panel-body">
+				  <p class="text-center">Percentage of pay</p>
+				  <div class="col-md-6">
+					  %<ng-count-up from="0" to="20" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					  <p class="text-center">Standard</p>
+				  </div>
+				  <div class="col-md-6">
+			  		  %<ng-count-up from="0" to="{{financialPercantage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					  <p class="text-center">You</p>
+				  </div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center">Personal Choices</h3>
+			  </div>
+			  <div class="panel-body">
+				  <p class="text-center">Percentage of pay</p>
+				  <div class="col-md-6">
+					  %<ng-count-up from="0" to="30" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					  <p class="text-center">Standard</p>
+				  </div> 
+				  <div class="col-md-6">
+			  		%<ng-count-up from="0" to="{{personalPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					<p class="text-center">You</p>
+				  </div>
+			  </div>
+			</div>
+		</div>
+		
+		
 	</div>
   </div>
   

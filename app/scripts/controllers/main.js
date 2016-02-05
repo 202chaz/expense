@@ -47,16 +47,20 @@ angular.module('expenseApp')
 		  $scope.gym = $scope.getData.gym;
 		  $scope.other3 = $scope.getData.other3;
 		  $scope.personalChoices = $scope.cellphone + $scope.cable + $scope.dinningOut + $scope.other3;
+		  // Caluate Percentages
+		  $scope.essentialPercentage = $scope.essentialsTotal/$scope.grossPay*100;
+		  $scope.financialPercantage = $scope.financialObligations/$scope.grossPay*100;
+		  $scope.personalPercentage = $scope.personalChoices/$scope.grossPay*100;
 	  };
 	  
 
 	  $scope.updateChart = function() {
 		  	var data = [{
+		  	          	  name: 'Standard',
+		  				  data: [parseFloat($scope.essentialsGross),parseFloat($scope.financialGross),parseFloat($scope.personalGross)]
+		  	          }, {
 		  				  name: 'You',
 		  	              data: [parseFloat($scope.essentialsTotal), parseFloat($scope.financialObligations), parseFloat($scope.personalChoices)]
-		  	          }, {
-		  	          	  name: 'Recommended',
-		  				  data: [parseFloat($scope.essentialsGross),parseFloat($scope.financialGross),parseFloat($scope.personalGross)]
 		  	          }];
 					  $scope.highchartsNG.series = data;
 	  };
