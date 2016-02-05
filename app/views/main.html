@@ -126,12 +126,11 @@
 			  <div class="panel-body">
 				  <p class="text-center">Percentage of pay</p>
 				  <div class="col-md-6">
-					  %<ng-count-up from="0" to="50" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					  <ng-count-up from="0" to="50" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
 					  <p class="text-center">Standard</p>
 				  </div>
 				  <div class="col-md-6">
-			  		%<ng-count-up from="0" to="{{essentialPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage" ng-if="{{essentialPercentage}}<'50'"></ng-count-up>
-					<ng-count-up from="0" to="{{essentialPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="overPercentage" ng-if="{{essentialPercentage}}>'50'"></ng-count-up>
+					<ng-count-up from="0" to="{{essentialPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" ng-class="{{essentialPercentage}} < 50 ? 'percentage': 'overPercentage'"></ng-count-up>
 					<p class="text-center">You</p>
 				  </div>
 			  </div>
@@ -146,11 +145,11 @@
 			  <div class="panel-body">
 				  <p class="text-center">Percentage of pay</p>
 				  <div class="col-md-6">
-					  %<ng-count-up from="0" to="20" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					  <ng-count-up from="0" to="20" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
 					  <p class="text-center">Standard</p>
 				  </div>
 				  <div class="col-md-6">
-			  		  %<ng-count-up from="0" to="{{financialPercantage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+			  		  <ng-count-up from="0" to="{{financialPercantage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
 					  <p class="text-center">You</p>
 				  </div>
 			  </div>
@@ -165,11 +164,11 @@
 			  <div class="panel-body">
 				  <p class="text-center">Percentage of pay</p>
 				  <div class="col-md-6">
-					  %<ng-count-up from="0" to="30" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+					  <ng-count-up from="0" to="30" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
 					  <p class="text-center">Standard</p>
 				  </div> 
 				  <div class="col-md-6">
-			  		%<ng-count-up from="0" to="{{personalPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
+			  		<ng-count-up from="0" to="{{personalPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
 					<p class="text-center">You</p>
 				  </div>
 			  </div>

@@ -53,6 +53,23 @@ angular.module('expenseApp')
 		  $scope.personalPercentage = $scope.personalChoices/$scope.grossPay*100;
 	  };
 	  
+	  $scope.options = {
+	    useEasing : true,
+	    useGrouping : true,
+	    separator : ',',
+	    decimal : '.',
+	    prefix : '%',
+	    suffix : ''
+	  };
+	  
+	  $scope.addClass = function() {
+		  if ($scope.essentialPercentage > '50') {
+			  'overpercentage';
+		  } else {
+			  'percentage';
+		  };
+	  };
+	  
 
 	  $scope.updateChart = function() {
 		  	var data = [{
@@ -64,10 +81,7 @@ angular.module('expenseApp')
 		  	          }];
 					  $scope.highchartsNG.series = data;
 	  };
-	      $scope.options = {
-	          type: 'bar'
-	      };
-
+	
 
 	      $scope.highchartsNG = {
 	          options: {
