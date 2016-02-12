@@ -10,13 +10,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 html {
-text-rendering: optimizeLegibility !important;
 
--webkit-font-smoothing: antialiased !important;
 }
 
 body {
   padding: 0;
+    -webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
