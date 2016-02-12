@@ -34,6 +34,7 @@ module.exports = function(config) {
       'bower_components/highcharts-ng/dist/highcharts-ng.js',
       'bower_components/countUp.js/countUp.js',
       'bower_components/ng-countUp.js/ngCountUp.min.js',
+      'bower_components/bootstrap-validator/dist/validator.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
