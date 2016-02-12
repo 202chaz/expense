@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,900);
 // endbower
 
 .browsehappy {
@@ -29,8 +30,8 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+
+  margin-bottom: 5px;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -44,12 +45,25 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  color: #fafafa;
+  bottom:0px;
+  position:fixed;
+  width:100%;
+  background-color:#9e9e9e;
 }
 
 .container-narrow > hr {
   margin: 30px 0;
+}
+
+/* Custom NavBar */
+.navbar-default {
+    background-color: rgb(144, 237, 125) !important;
+
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #00bfa5 !important;
 }
 
 /* Main marketing message and sign up button */
@@ -71,22 +85,61 @@ body {
     margin-top: 28px;
   }
 }
+.btn-custom {
+    color: #fff;
+    background-color: rgb(144, 237, 125);
+}
+.btn-custom:hover {
+    color: #fff;
+	background-color:#79ea62;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 1140px;
   }
+  .navbar-default .navbar-brand {
+      color: #fff;
+  }
+  .navbar-brand {
+      float: left;
+      padding: 15px 15px;
+      font-size: 36px;
+      line-height: 20px;
+      height: 50px;
+	  font-family: 'Titillium Web', sans-serif;
+	  font-weight: 400;
+	  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  }
   .percentage {
-	  color:#5cb85c;
+	  color: rgb(144, 237, 125);
 	  font-size:35px;
 	  font-weight:bold;
+  }
+  .yourPercentage {
+  	  color: #5c5c5c;
+	  font-size:35px;
+	  font-weight:bold;
+  }
+  .standard {
+      color: rgb(144, 237, 125);
+	  font-weight:bold;
+  }
+  .you {
+  	color:#5c5c5c;
+  	font-weight:bold;
   }
   .overPercentage {
 	  color:#d9534f;
 	  font-size:35px;
 	  font-weight:bold;
   }
+  .banner {
+  width:90%;
+  margin-left:5%;
+  }
+
 
   /* Remove the padding we set earlier */
   .header,

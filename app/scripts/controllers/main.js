@@ -23,9 +23,11 @@ angular.module('expenseApp')
 		  // Grabs gross pay data 
 		  $scope.grossPay = $scope.getData.grossPay;
 		  // Calculations based on recommended percentages
+		  // jshint ignore: start
 		  $scope.essentialsGross = $scope.grossPay * .50;
 		  $scope.financialGross = $scope.grossPay * .20;
 		  $scope.personalGross = $scope.grossPay * .30;
+		  // jshint ignore: end
 		  // Makes each elements from form data an assignable variable
 		  $scope.housing = $scope.getData.housing;
 		  $scope.food = $scope.getData.food;
@@ -61,14 +63,37 @@ angular.module('expenseApp')
 	    prefix : '%',
 	    suffix : ''
 	  };
-	  
-	  $scope.addClass = function() {
+	  //Adjust colors for percentages if over recommended value
+	  $scope.getEssential = function() {
 		  if ($scope.essentialPercentage > '50') {
-			  'overpercentage';
+			  $scope.adj = 'overPercentage';
+			  $scope.setMe = 'over the recommended guideine by' + ' ' + parseInt($scope.essentialPercentage - 50) + '% which puts you at $' + parseFloat($scope.essentialsTotal - $scope.essentialsGross) + ' ' + 'over your recommended spendings.' ;
 		  } else {
-			  'percentage';
-		  };
+			  $scope.adj = 'yourPercentage';
+			  $scope.setMe = 'meeting or below the recommended guideline.';
+		  }
 	  };
+	  //Adjust colors for percentages if over recommended value
+	  $scope.getFinancial = function() {
+		  if ($scope.financialPercantage > '20') {
+			  $scope.adj1 = 'overPercentage';
+			  $scope.setMe1 = 'over the recommended guideine by' + ' ' + parseInt($scope.financialPercantage - 20) + '% which puts you at $' + parseFloat($scope.financialObligations - $scope.financialGross) + ' ' + 'over your recommended spendings.' ;
+		  } else {
+			  $scope.adj1 = 'yourPercentage';
+			  $scope.setMe1 = 'meeting or below the recommended guideline.';
+		  }
+	  };
+	  //Adjust colors for percentages if over recommended value
+	  $scope.getPersonal = function() {
+		  if ($scope.personalPercentage > '30') {
+			  $scope.adj2 = 'overPercentage';
+			  $scope.setMe2 = 'over the recommended guideine by' + ' ' + parseInt($scope.personalPercentage - 30) + '% which puts you at $' + parseFloat($scope.personalChoices - $scope.personalGross) + ' ' + 'over your recommended spendings.' ;
+		  } else {
+			  $scope.adj2 = 'yourPercentage';
+			  $scope.setMe2 = 'meeting or below the recommended guideline.';
+		  }
+	  };
+	  
 	  
 
 	  $scope.updateChart = function() {
@@ -85,16 +110,17 @@ angular.module('expenseApp')
 
 	      $scope.highchartsNG = {
 	          options: {
+				  colors: ['#90ed7d','#5c5c5c'],
 	              chart: {
 	                  type: 'column'
 	              }
 	          },
 	          title: {
-	              text: 'Your Report'
+	              text: ''
 	          },
 			  xAxis: {
 				  title: {
-					  text: 'Breakdown'
+					  text: 'Break Down'
 				  },
 			           categories: [
 			                  'Essentials',
@@ -104,7 +130,7 @@ angular.module('expenseApp')
 			              crosshair: true
 			          },
 			  yAxis: {
-			              allowDecimals: false,
+			              allowDecimals: true,
 			              title: {
 			                  text: 'Money Spent'
 			              }
@@ -115,7 +141,16 @@ angular.module('expenseApp')
 
 		    			}  	
 	      };
-	  
+		  
+		  $scope.toggle = true;
+		  $scope.toggleCustom = function() {
+			  $scope.toggle = false;
+		  };
+		  
+		  //Reloads app from Start Over button
+		  $scope.startOver = function() {
+		  	  location.reload();
+		  };  
 
   });
   

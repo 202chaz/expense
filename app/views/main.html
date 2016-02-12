@@ -1,123 +1,123 @@
   <div class="row">
 	  <div class="col-md-4 sidepanel">
-		<form class="form-horizontal">
-			<h4 class="text-uppercase">Income:</h4>
+		<form class="form-horizontal" data-toggle="validator" role="form" name="myForm">
+			<h4 class="text-uppercase">Monthly Income:</h4>
 			<div class="form-group">
 		    <label for="inputEmail3" class="col-sm-5 control-label">Gross Pay:</label>
 				<div class="col-sm-5">
-					<input type="number" ng-model="expense.grossPay" placeholder="Amount" class="form-control">
+					<input type="number" ng-model="expense.grossPay" placeholder="Amount" class="form-control" data-error="Enter an amount or 0" required>
 				</div>
 			</div>
 			  <h4 class="text-uppercase">Essentials:</h4>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Housing/Rent</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.housing" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.housing" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Food</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.food" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.food" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Car/Transportation</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.transportation" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.transportation" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Car Insurance</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.insurance" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.insurance" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Power Utility Bill</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.power" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.power" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Gas Utility Bill</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.gas" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.gas" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Water Utility Bill</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.water" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.water" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Other</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.other" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.other" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
 			<h4 class="text-uppercase">Financial Obligations:</h4>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Savings Contributions</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.savings" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.savings" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Retirement Contributions</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.retirement" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.retirement" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Debt Reduction</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.debt" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.debt" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Other</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.other2" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.other2" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
 			<h4 class="text-uppercase">Personal Choices:</h4>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">CellPhone Bill</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.cellphone" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.cellphone" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Cable/Internet Bill</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.cable" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.cable" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Dinning Out</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.dinningOut" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.dinningOut" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   		    <label for="inputEmail3" class="col-sm-5 control-label">Other</label>
   				<div class="col-sm-5">
-  					<input type="number" ng-model="expense.other3" placeholder="Amount" class="form-control">
+  					<input type="number" ng-model="expense.other3" placeholder="Amount" class="form-control" required>
   				</div>
   			</div>
   			<div class="form-group">
   				<div class="col-sm-8 col-md-offset-3">
 	  			  <button type="button" ng-click="reset()" value="Reset" class="btn btn-default">Reset</button>
-	  			  <button type="submit" ng-click="update(expense); updateChart()" value="Save" class="btn btn-info">Submit</button>
+	  			  <button type="submit" ng-disabled="myForm.$invalid" ng-click="update(expense); updateChart(); getEssential(); getFinancial(); getPersonal(); toggleCustom();" value="Save" class="btn btn-custom">Submit</button>
   				</div>
   			</div>
 		</form>
 	</div>
-	<div class="col-md-8">
-		<highchart id="chart1" config="highchartsNG"></highchart>
+	<div class="col-md-8" ng-hide="toggle">
 		<h4 class="text-center">Your Summary</h4>
+		<highchart id="chart1" config="highchartsNG"></highchart>
 		<div class="col-md-4">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
@@ -127,11 +127,11 @@
 				  <p class="text-center">Percentage of pay</p>
 				  <div class="col-md-6">
 					  <ng-count-up from="0" to="50" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
-					  <p class="text-center">Standard</p>
+					  <p class="text-center standard">Standard</p>
 				  </div>
 				  <div class="col-md-6">
-					<ng-count-up from="0" to="{{essentialPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" ng-class="{{essentialPercentage}} < 50 ? 'percentage': 'overPercentage'"></ng-count-up>
-					<p class="text-center">You</p>
+					<ng-count-up from="0" to="{{essentialPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" ng-class="adj" ng-init="getEssential()"></ng-count-up>
+					<p class="text-center you">You</p>
 				  </div>
 			  </div>
 			</div>
@@ -146,11 +146,11 @@
 				  <p class="text-center">Percentage of pay</p>
 				  <div class="col-md-6">
 					  <ng-count-up from="0" to="20" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
-					  <p class="text-center">Standard</p>
+					  <p class="text-center standard">Standard</p>
 				  </div>
 				  <div class="col-md-6">
-			  		  <ng-count-up from="0" to="{{financialPercantage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
-					  <p class="text-center">You</p>
+			  		  <ng-count-up from="0" to="{{financialPercantage | number:0}}" decimals="0" duration="2" delay="500" options="options" ng-class="adj1" ng-init="getFinancial()"></ng-count-up>
+					  <p class="text-center you">You</p>
 				  </div>
 			  </div>
 			</div>
@@ -165,17 +165,77 @@
 				  <p class="text-center">Percentage of pay</p>
 				  <div class="col-md-6">
 					  <ng-count-up from="0" to="30" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
-					  <p class="text-center">Standard</p>
+					  <p class="text-center standard">Standard</p>
 				  </div> 
 				  <div class="col-md-6">
-			  		<ng-count-up from="0" to="{{personalPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" class="percentage"></ng-count-up>
-					<p class="text-center">You</p>
+			  		<ng-count-up from="0" to="{{personalPercentage | number:0}}" decimals="0" duration="2" delay="500" options="options" ng-class="adj2" ng-init="getPersonal()"></ng-count-up>
+					<p class="text-center you">You</p>
 				  </div>
 			  </div>
 			</div>
 		</div>
 		
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center">Summary</h3>
+			  </div>
+			  <div class="panel-body">
+				  <div class="col-md-12">
+					 Your are currently {{setMe}}
+				  </div>
+			  </div>
+			</div>
+		</div>
 		
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center">Summary</h3>
+			  </div>
+			  <div class="panel-body">
+				  <div class="col-md-12">
+					 Your are currently {{setMe1}}
+				  </div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center">Summary</h3>
+			  </div>
+			  <div class="panel-body">
+				  <div class="col-md-12">
+					 Your are currently {{setMe2}}
+				  </div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="row">
+		<center><button ng-click="startOver()" class="btn btn-warning btn-small loop"> <p><span class="glyphicon glyphicon-repeat"></span> Start Over</p></button></center>
 	</div>
+
+	
+	</div>
+	
+	<div class="col-md-8" ng-show="toggle">
+		<div class="banner alert alert-info" role="alert">
+			<p class="text-center">Enter your monthly income and expenses to get your report.</p>
+		</div>
+	</div>
+	
   </div>
+  
+  <script>
+  $('#form').validator().on('submit', function (e) {
+    if (e.isDefaultPrevented()) {
+      // handle the invalid form...
+    } else {
+      // everything looks good!
+    }
+  })
+  </script
   
