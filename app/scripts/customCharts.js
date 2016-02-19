@@ -1,6 +1,6 @@
 'use strict';
 // jshint ignore: start
-Highcharts.setOptions({
+/*Highcharts.setOptions({
 		lang: {
 			thousandsSep: ','
 		},
@@ -11,4 +11,4 @@ Highcharts.setOptions({
 			  return this.series.name + '<br><b>$' + this.y + '</b>';
 		  } 
 	  }
-});
+});*/
